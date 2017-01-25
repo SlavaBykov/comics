@@ -9,4 +9,14 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>Command</display-name>
+    <servlet-name>Command</servlet-name>
+    <servlet-class>by.htp6.comicsworld.command.Command</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Command</servlet-name>
+    <url-pattern>/Command</url-pattern>
+  </servlet-mapping>
 </web-app>
