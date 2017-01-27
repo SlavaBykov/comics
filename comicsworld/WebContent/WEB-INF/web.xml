@@ -19,4 +19,14 @@
     <servlet-name>Command</servlet-name>
     <url-pattern>/Command</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Controller</display-name>
+    <servlet-name>Controller</servlet-name>
+    <servlet-class>by.htp6.comicsworld.controller.Controller</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Controller</servlet-name>
+    <url-pattern>/Controller</url-pattern>
+  </servlet-mapping>
 </web-app>

@@ -1,4 +1,4 @@
-package by.htp6.comicsworld.dao.exception;
+package by.htp6.comicsworld.command.exception;
 
 public class CommandNotFoundException extends Exception{
 
