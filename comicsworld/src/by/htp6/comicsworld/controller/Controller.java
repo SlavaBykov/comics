@@ -21,16 +21,16 @@ public class Controller extends HttpServlet {
      */
     public Controller() {
         super();
-        // TODO Auto-generated constructor stub
     }
     
     private void proccesRequest(HttpServletRequest request, HttpServletResponse response)
     		throws ServletException, IOException{
+    	response.setContentType("text/html");
+    	request.setCharacterEncoding("utf-8");
     	CommandProvider provider = CommandProvider.getInstance();
     	String page = null;
     	Command command = null;
     	String commandName = request.getParameter("command");
-    	
     	try{
     		command = provider.getCommand(commandName);
     		page = command.execute(request, response);

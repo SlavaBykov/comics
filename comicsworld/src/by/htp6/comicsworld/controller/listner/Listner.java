@@ -7,16 +7,16 @@ import by.htp6.comicsworld.command.Command;
 import by.htp6.comicsworld.command.CommandProvider;
 import by.htp6.comicsworld.command.exception.CommandNotFoundException;
 
-public class SourceListner implements ServletContextListener{
+public class Listner implements ServletContextListener{
 
 	@Override
-	public void contextDestroyed(ServletContextEvent arg0) {
+	public void contextDestroyed(ServletContextEvent cse) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void contextInitialized(ServletContextEvent arg0) {
+	public void contextInitialized(ServletContextEvent sce) {
 		CommandProvider provider = CommandProvider.getInstance();
 		String statusDAO = null;
 		try{
@@ -24,6 +24,7 @@ public class SourceListner implements ServletContextListener{
 			statusDAO = command.execute(null, null);
 		}catch(CommandNotFoundException e){
 			e.printStackTrace();
+			statusDAO = "Listner hasn't work";
 		}
 		
 	}

@@ -1,24 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		xmlns="http://java.sun.com/xml/ns/javaee" 
+		xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" 
+		id="WebApp_ID" 
+		version="2.5">
   <display-name>comicsworld</display-name>
   <welcome-file-list>
-    <welcome-file>index.html</welcome-file>
-    <welcome-file>index.htm</welcome-file>
-    <welcome-file>index.jsp</welcome-file>
-    <welcome-file>default.html</welcome-file>
-    <welcome-file>default.htm</welcome-file>
-    <welcome-file>default.jsp</welcome-file>
+     <welcome-file>/pages/index.jsp</welcome-file>
   </welcome-file-list>
-  <servlet>
-    <description></description>
-    <display-name>Command</display-name>
-    <servlet-name>Command</servlet-name>
-    <servlet-class>by.htp6.comicsworld.command.Command</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>Command</servlet-name>
-    <url-pattern>/Command</url-pattern>
-  </servlet-mapping>
   <servlet>
     <description></description>
     <display-name>Controller</display-name>
@@ -29,4 +18,40 @@
     <servlet-name>Controller</servlet-name>
     <url-pattern>/Controller</url-pattern>
   </servlet-mapping>
+  
+  <servlet>
+    	<servlet-name>index-page</servlet-name>
+    	<jsp-file>/pages/index.jsp</jsp-file>
+  	</servlet>
+  	<servlet-mapping>
+    	<servlet-name>index-page</servlet-name>
+    	<url-pattern>/index</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+    	<servlet-name>signup-page</servlet-name>
+    	<jsp-file>/pages/signup.jsp</jsp-file>
+  	</servlet>
+  	<servlet-mapping>
+    	<servlet-name>signup-page</servlet-name>
+    	<url-pattern>/signup</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+    	<servlet-name>signin-page</servlet-name>
+    	<jsp-file>/pages/signin.jsp</jsp-file>
+  	</servlet>
+  	<servlet-mapping>
+    	<servlet-name>signin-page</servlet-name>
+    	<url-pattern>/signin</url-pattern>
+    </servlet-mapping>
+    <session-config>
+    <session-timeout>30</session-timeout>
+    </session-config>
+  <listener>
+  	<listener-class>by.htp6.comicsworld.controller.listner.Listner</listener-class>
+  </listener>
 </web-app>
+
+
+
